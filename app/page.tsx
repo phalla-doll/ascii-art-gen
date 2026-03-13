@@ -389,7 +389,7 @@ export default function Page() {
                         </div>
 
                         <div className="relative flex-1">
-                            <pre className="h-full w-full overflow-auto bg-transparent px-3 py-3 font-mono text-[10px] leading-[1.05] md:text-[11px]">
+                            <pre className="flex h-full w-full items-start justify-center overflow-auto bg-transparent px-3 py-6 text-center font-mono text-[10px] leading-[1.05] md:text-[11px]">
                                 {isConverting
                                     ? "Converting image to ASCII..."
                                     : ascii ||
