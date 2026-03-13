@@ -2,6 +2,8 @@
 
 ASCII Studio is a web app that converts images into ASCII art directly in the browser. You can upload or drag & drop an image (or paste from the clipboard), tweak resolution and character density, then copy, download, or export the ASCII output as a PNG.
 
+![ASCII Studio OG preview](https://github.com/phalla-doll/ascii-art-gen/blob/main/public/og-image-main.png)
+
 ---
 
 ## Tech Stack
