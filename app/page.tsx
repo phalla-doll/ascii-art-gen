@@ -236,7 +236,7 @@ export default function Page() {
                 </header>
 
                 <section className="grid flex-1 gap-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.3fr)]">
-                    <div className="flex min-h-[260px] flex-col rounded-xl border bg-card overflow-hidden">
+                    <div className="flex min-h-[260px] flex-col overflow-hidden rounded-xl border bg-card">
                         <div className="flex h-[41px] items-center justify-between gap-2 border-b px-3">
                             <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                                 Image input
@@ -280,7 +280,11 @@ export default function Page() {
                                 <div className="flex flex-wrap items-center justify-between gap-3">
                                     <div className="space-y-1">
                                         <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                                            Resolution [<span className="font-mono font-semibold">{maxWidth}</span> CHRS]
+                                            Resolution [
+                                            <span className="font-mono font-semibold">
+                                                {maxWidth}
+                                            </span>{" "}
+                                            CHRS]
                                         </p>
                                     </div>
                                     <div className="w-full max-w-xs">
