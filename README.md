@@ -1,6 +1,6 @@
 ## ASCII Studio – Image to ASCII Art
 
-ASCII Studio is a web app that converts images into ASCII art directly in the browser. You can upload or drag & drop an image, tweak resolution and character density, and get a clean ASCII representation you can copy or export.
+ASCII Studio is a web app that converts images into ASCII art directly in the browser. You can upload or drag & drop an image (or paste from the clipboard), tweak resolution and character density, then copy, download, or export the ASCII output as a PNG.
 
 ---
 
@@ -48,19 +48,22 @@ For performance and readability, the app can also treat **blocks of pixels** (e.
 
 ---
 
-## Core Features (Planned)
+## Core Features
 
 - **Image → ASCII conversion**
-  - Upload or drag & drop an image.
-  - Generate grayscale ASCII art in the browser.
+  - Upload, drag & drop, or paste an image from the clipboard.
+  - Conversion runs fully in the browser using the Canvas API.
 - **Adjustable resolution**
   - Slider to control output width (in characters).
-  - Height is derived automatically from the image aspect ratio.
+  - Height is derived automatically from the image aspect ratio and character aspect ratio.
 - **Density presets**
-  - Choose from multiple character sets (e.g. simple vs detailed).
-- **Export**
+  - Toggle between multiple character sets (Light, Balanced, High).
+- **Export & sharing**
   - Copy ASCII to clipboard.
   - Download ASCII as a `.txt` file.
+  - Export ASCII as a `.png` image with proper monospace rendering.
+- **Polished UI**
+  - Responsive, ShadCN-based layout with dark/light themes (toggleable via keyboard shortcut).
 
 ---
 
