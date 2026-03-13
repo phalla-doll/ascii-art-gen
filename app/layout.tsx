@@ -25,12 +25,21 @@ export const metadata: Metadata = {
         description:
             "Drop an image, tune resolution and density, and get beautiful ASCII output. Supports PNG, JPG, GIF, and WEBP with export to PNG or .txt.",
         siteName: "ASCII Studio",
+        images: [
+            {
+                url: "/og-image-main.png",
+                width: 1200,
+                height: 630,
+                alt: "ASCII Studio – Image to ASCII Art Generator preview",
+            },
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "ASCII Studio – Image to ASCII Art Generator",
         description:
             "Generate clean ASCII art from images with adjustable resolution and density presets, right in your browser.",
+        images: ["/og-image-main.png"],
     },
     keywords: [
         "ASCII art generator",
