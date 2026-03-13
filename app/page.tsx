@@ -16,13 +16,9 @@ type DensityPreset = {
 }
 
 const DENSITY_PRESETS: DensityPreset[] = [
+    { id: "light", name: "Light", value: "#*+=-:. " },
     { id: "default", name: "Balanced", value: "@%#*+=-:. " },
-    {
-        id: "dense",
-        name: "High detail",
-        value: "@$B%8&WM#*oahkbdpqwmZ0QLCJUYX",
-    },
-    { id: "light", name: "Lightweight", value: "#*+=-:. " },
+    { id: "dense", name: "High", value: "@$B%8&WM#*oahkbdpqwmZ0QLCJUYX" },
 ]
 
 function useAsciiConverter() {
