@@ -218,7 +218,7 @@ export default function Page() {
     } = useAsciiConverter()
 
     return (
-        <main className="flex min-h-svh flex-col bg-background text-foreground">
+        <main className="flex min-h-svh flex-col bg-background text-foreground overflow-x-hidden">
             <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-start gap-6 px-4 py-6 md:px-8 md:py-10 md:justify-center">
                 <header className="flex flex-col items-start justify-between gap-3 md:flex-row md:items-center">
                     <div>
@@ -263,8 +263,8 @@ export default function Page() {
                                         onFilesSelected(event.target.files)
                                     }
                                 />
-                                <div className="pointer-events-none flex flex-col gap-2">
-                                    <p className="font-medium">
+                                <div className="pointer-events-none flex w-full flex-col gap-2">
+                                    <p className="w-full font-medium wrap-break-word">
                                         {file
                                             ? file.name
                                             : "Drop an image here or click to upload"}
@@ -345,7 +345,7 @@ export default function Page() {
                             <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                                 ASCII output
                             </p>
-                            <div className="flex gap-1.5">
+                            <div className="flex flex-wrap gap-1.5 md:flex-nowrap md:justify-end">
                                 <Button
                                     type="button"
                                     size="xs"
