@@ -219,7 +219,7 @@ export default function Page() {
 
     return (
         <main className="flex min-h-svh flex-col bg-background text-foreground">
-            <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-6 px-4 py-6 md:px-8 md:py-10">
+            <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-start gap-6 px-4 py-6 md:px-8 md:py-10 md:justify-center">
                 <header className="flex flex-col items-start justify-between gap-3 md:flex-row md:items-center">
                     <div>
                         <h1 className="text-xl font-semibold tracking-tight md:text-2xl">
@@ -235,15 +235,15 @@ export default function Page() {
                     </p>
                 </header>
 
-                <section className="grid flex-1 gap-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.3fr)]">
-                    <div className="flex min-h-[260px] flex-col overflow-hidden rounded-xl border bg-card">
+                <section className="grid gap-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.3fr)]">
+                    <div className="flex min-h-[260px] max-h-[720px] flex-col overflow-hidden rounded-xl border bg-card">
                         <div className="flex h-[41px] items-center justify-between gap-2 border-b px-3">
                             <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                                 Image input
                             </p>
                         </div>
 
-                        <div className="flex-1 space-y-4 px-3 py-3 text-sm">
+                        <div className="flex-1 space-y-4 overflow-auto px-3 py-3 text-sm">
                             <button
                                 onDragOver={(event) => {
                                     event.preventDefault()
@@ -340,7 +340,7 @@ export default function Page() {
                         </div>
                     </div>
 
-                    <div className="flex min-h-[260px] flex-col rounded-xl border bg-card">
+                    <div className="flex min-h-[260px] max-h-[720px] flex-col rounded-xl border bg-card">
                         <div className="flex h-[41px] items-center justify-between gap-2 border-b px-3">
                             <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                                 ASCII output
