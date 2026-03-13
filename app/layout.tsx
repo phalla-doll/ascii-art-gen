@@ -5,7 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
-const siteUrl = new URL("https://ascii-gen.manthaa.dev")
+const siteUrl = new URL("https://ascii-art.manthaa.dev")
 
 export const metadata: Metadata = {
     title: {

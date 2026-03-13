@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 
-const siteUrl = "https://ascii-gen.manthaa.dev"
+const siteUrl = "https://ascii-art.manthaa.dev"
 
 export default function robots(): MetadataRoute.Robots {
     return {
