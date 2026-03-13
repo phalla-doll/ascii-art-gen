@@ -312,34 +312,29 @@ export default function Page() {
                                 </div>
 
                                 <div className="flex flex-wrap items-center justify-between gap-3">
-                                    <div className="space-y-1">
+                                    <div className="space-y-2">
                                         <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                                             Density preset
                                         </p>
-                                        <p className="text-sm">
-                                            {DENSITY_PRESETS.find(
-                                                (p) => p.id === densityId
-                                            )?.name ?? "Balanced"}
-                                        </p>
+                                        <ToggleGroup
+                                            type="single"
+                                            value={densityId}
+                                            onValueChange={(next) => {
+                                                if (next) setDensityId(next)
+                                            }}
+                                            variant="outline"
+                                            size="sm"
+                                        >
+                                            {DENSITY_PRESETS.map((preset) => (
+                                                <ToggleGroupItem
+                                                    key={preset.id}
+                                                    value={preset.id}
+                                                >
+                                                    {preset.name}
+                                                </ToggleGroupItem>
+                                            ))}
+                                        </ToggleGroup>
                                     </div>
-                                    <ToggleGroup
-                                        type="single"
-                                        value={densityId}
-                                        onValueChange={(next) => {
-                                            if (next) setDensityId(next)
-                                        }}
-                                        variant="outline"
-                                        size="sm"
-                                    >
-                                        {DENSITY_PRESETS.map((preset) => (
-                                            <ToggleGroupItem
-                                                key={preset.id}
-                                                value={preset.id}
-                                            >
-                                                {preset.name}
-                                            </ToggleGroupItem>
-                                        ))}
-                                    </ToggleGroup>
                                 </div>
                             </div>
 
