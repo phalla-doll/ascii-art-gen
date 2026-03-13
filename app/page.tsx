@@ -8,6 +8,7 @@ import { Slider } from "@/components/ui/slider"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { convertImageDataToAscii, type AsciiOptions } from "@/lib/ascii"
 import { exportAsciiToPng } from "@/lib/ascii-export"
+import Link from "next/link"
 
 type DensityPreset = {
     id: string
@@ -332,6 +333,9 @@ export default function Page() {
                                 </div>
                             </div>
 
+                            <p className="text-center text-xs text-muted-foreground">
+                                Source on <Link href="https://github.com/phalla-doll/ascii-art-gen" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</Link>
+                            </p>
                             {error ? (
                                 <p className="text-xs text-destructive">
                                     {error}
@@ -382,7 +386,7 @@ export default function Page() {
                                 {isConverting
                                     ? "Converting image to ASCII..."
                                     : ascii ||
-                                      "Your ASCII art will appear here after you upload an image."}
+                                    "Your ASCII art will appear here after you upload an image."}
                             </pre>
                         </div>
                     </div>
