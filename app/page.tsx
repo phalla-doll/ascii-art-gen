@@ -280,13 +280,7 @@ export default function Page() {
                                 <div className="flex flex-wrap items-center justify-between gap-3">
                                     <div className="space-y-1">
                                         <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                                            Resolution
-                                        </p>
-                                        <p className="text-sm">
-                                            Width:{" "}
-                                            <span className="font-mono">
-                                                {maxWidth} chars
-                                            </span>
+                                            Resolution [<span className="font-mono font-semibold">{maxWidth}</span> CHRS]
                                         </p>
                                     </div>
                                     <div className="w-full max-w-xs">
