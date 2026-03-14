@@ -1,9 +1,14 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 import "./globals.css"
+import { GA4RouteTracker } from "@/components/analytics/ga4-route-tracker"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+
+const gaId =
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-RM57TXML0J"
 
 const siteUrl = new URL("https://ascii-art.manthaa.dev")
 
@@ -78,7 +83,9 @@ export default function RootLayout({
         >
             <body>
                 <ThemeProvider>{children}</ThemeProvider>
+                <GA4RouteTracker />
             </body>
+            {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
         </html>
     )
 }
